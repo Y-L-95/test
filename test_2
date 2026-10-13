@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+	int l,m;
+	scanf("%d %d",&l,&m);
+	int arr[10000]={0};
+	int i;
+	for(i = 0;i < m;i++)
+	{
+		int a,b;
+		scanf("%d %d",&a,&b);
+		int I;
+		for(I = a;I <= b;I++)
+		{
+			arr[I] = 1;
+		}
+	}
+	int count = 0;
+	for(i = 0;i < l;i++)
+	{
+		if(arr[i] == 1)	count++;	
+	}
+	printf("%d",l+1-count); 
+}
